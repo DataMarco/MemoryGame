@@ -57,15 +57,19 @@ header {
   border: 5px solid #232c26;
   border-radius: 5px;
   transition: all 400ms ease;
+  overflow: hidden;
 }
 
 .front {
   transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .brasileirao {
   background-image: url('../images/brasileirao.png');
   backface-visibility: hidden;
+  background-size: contain;
 }
 
 .reveal-card {
