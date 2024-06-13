@@ -44,10 +44,17 @@ let secondCard = '';
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
-  if (disabledCards.length === 20) {
-    clearInterval(this.loop);
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+  if (disabledCards.length === 40) {
+    clearInterval(this.loop); 
+    exibirAlerta() 
   }
+}
+function exibirAlerta() {
+  let spanPlayer = document.querySelector('.player');
+  let timer = document.querySelector('.timer');
+  let errorNumber = document.getElementById('error-number');
+
+  alert(`Parabéns, ${spanPlayer.innerHTML}! O seu tempo foi de: ${timer.innerHTML}. O número de erros foi: ${errorNumber.innerHTML}`);
 }
 
 const checkCards = () => {
